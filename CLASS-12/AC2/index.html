@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python -Activities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+
+    <!-- <p style="text-align: center; font-size: 1.7rem; font-weight: bold; margin-bottom: 0;">Mini Activity</p> -->
+    <p style="text-align: center; font-size: 1.7rem; font-weight: bold; margin-bottom: 0;">Activity
+        👉🏽<a href="https://colab.research.google.com/drive/10WlXRR0o13f0bu_qIxyojhl8MLzBFDbC#scrollTo=T1JM_1M_6t9a" target="_blank" class="button">Open Template</a>
+    </p>
+    <p style="text-align: center; font-size: 1.7rem; font-weight: bold; margin-bottom: 0;">Let's consider you are building a social media app for connecting people with similar hobbies. <br>A social media app requires you to store details of registered people.</p>
+    <main style="width: 90%; display: grid; grid-template-columns: repeat(2,1fr);">
+        <section id="activity1">
+            <h2>Activity 1: Create a User Dictionary</h2>
+            <p>Create a dictionary to store details of 2 people who have registered in your app with the following details:</p>
+            <ul>
+                <li><strong>Name</strong></li>
+                <li><strong>ID</strong></li>
+                <li><strong>Email Address</strong></li>
+                <li><strong>Country</strong></li>
+                <li><strong>City</strong></li>
+                <li><strong>A list of Hobbies</strong></li>
+                ( The  IDs should be the keys.)
+            </ul>
+            <button class="show-answer-btn" id="show-answer-btn1">Show Code</button>
+            <img src="./images/image13.png" class="answer-img" id="answer-img1" alt="Code example for creating user dictionary" style="max-width: 100%; display: none;">
+        </section>
+    
+        <section id="activity2">
+            <h2>Activity 2: Print User Details by ID</h2>
+            <p>Print the details of the person with ID 102.</p>
+            <button class="show-answer-btn" id="show-answer-btn2">Show Code</button>
+            <img src="./images/image14.png" class="answer-img" id="answer-img2" alt="Code example for printing user details by ID" style="max-width: 100%; display: none;">
+        </section>
+    
+        <section id="activity3">
+            <h2>Activity 3: Add a New User</h2>
+            <p>A new person wants to register for the app. Take inputs from the user to add their details.</p>
+            <button class="show-answer-btn" id="show-answer-btn3">Show Code</button>
+            <img src="./images/image15.png" class="answer-img" id="answer-img3" alt="Code example for adding new user" style="max-width: 100%; display: none;">
+        </section>
+    
+        <section id="activity4">
+            <h2>Activity 4: Filter Users by Country and Hobby</h2>
+            <p>Print the names of people who are from India and have "dancing" as one of their hobbies.</p>
+            <button class="show-answer-btn" id="show-answer-btn4">Show Code</button>
+            <img src="./images/image16.png" class="answer-img" id="answer-img4" alt="Code example for filtering users" style="max-width: 100%; display: none;">
+        </section>
+    
+        <section id="activity5">
+            <h2>Activity 5: Remove User Account by ID</h2>
+            <p>Person with id 109 wants to remove their account.Print a confirmation message once their account has been removed.
+            </p>
+            <button class="show-answer-btn" id="show-answer-btn5">Show Code</button>
+            <img src="./images/image17.png" class="answer-img" id="answer-img5" alt="Code example for removing user account" style="max-width: 100%; display: none;">
+        </section>
+    
+        <section id="activity6">
+            <h2>Activity 6: Add a Hobby for Emily Davis</h2>
+            <p>Emily Davis wants to add a new hobby. Take input from the user and add this hobby to her list.</p>
+            <button class="show-answer-btn" id="show-answer-btn6">Show Code</button>
+            <img src="./images/image18.png" class="answer-img" id="answer-img6" alt="Code example for adding hobby to a user" style="max-width: 100%; display: none;">
+        </section>
+    </main>
+    
+    
+        
+     <br>
+
+    <button class="challenge-btn" onclick="window.location.href='challenges.html'">Challenges</button>
+<br> <br>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        for (let i = 1; i <= 6; i++) {
+            const showAnswerBtn = document.getElementById('show-answer-btn' + i);
+            const img = document.getElementById('answer-img' + i);
+
+            // Create the container div
+            const container = document.createElement('div');
+            container.classList.add('image-container');
+            img.parentNode.insertBefore(container, img);
+            container.appendChild(img);
+
+            // Create the full-screen icon
+            const icon = document.createElement('span');
+            icon.classList.add('fullscreen-icon');
+            icon.innerHTML = '⛶';
+            icon.style.color = 'white'; 
+            icon.style.display = 'none'; // Initially hide the icon
+            container.appendChild(icon);
+
+            // Event listener to show/hide image and icon
+            showAnswerBtn.addEventListener('click', function() {
+                if (img.style.display === 'none' || img.style.display === '') {
+                    img.style.display = 'block';
+                    icon.style.display = 'block'; // Show the icon when the image is displayed
+                    this.textContent = 'Hide Code';
+                } else {
+                    img.style.display = 'none';
+                    icon.style.display = 'none'; // Hide the icon when the image is hidden
+                    this.textContent = 'Show Code';
+                }
+            });
+
+            // Add full-screen functionality
+            icon.addEventListener('click', function () {
+                openFullscreen(img.src);
+            });
+
+            img.style.display = 'none'; // Initially hide the image
+        }
+    });
+
+    // function openFullscreen(imageSrc) {
+    //     let fullScreenWindow = window.open("");
+    //     fullScreenWindow.document.write(`<img src="${imageSrc}" style="width: 100%; height: auro;">`);
+    //     fullScreenWindow.document.body.style.margin = "0";
+    //     fullScreenWindow.document.body.style.overflow = "hidden";
+    // }
+    function openFullscreen(imageSrc) {
+    let fullScreenWindow = window.open("");
+    fullScreenWindow.document.write(`
+        <img src="${imageSrc}" style="display: block; max-width: 100%; max-height: 100vh; margin: auto;">
+    `);
+    fullScreenWindow.document.body.style.margin = "0";
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    main{
+        /* grid-template-columns: repeat(1, 1fr); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+</style>
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+
+    <p style="text-align: center; font-size: 1.7rem; font-weight: bold; margin-bottom: 0;">Challenges</p>
+    <main>
+        <section id="activity1" style="display: flex; flex-direction: column; align-items: center;">
+            <p style="font-size: 1.2rem;">
+                Write a program that translates a word into an emoji using a dictionary.
+            </p>
+            <pre style="background-color: #f8f8f8; padding: 0.3rem; border-radius: 5px; width: 100%; font-size: 1.2rem;">
+        # Dictionary to translate words into emojis
+        emoji_dict = {
+            "happy": "😊",
+            "sad": "😢",
+            "love": "❤️",
+            "angry": "😡",
+            "laugh": "😂",
+            "thumbs up": "👍",
+            "cool": "😎"
+        }
+            </pre>
+            <button class="show-answer-btn" id="show-answer-btn1">Show Code</button>
+        
+            <img src="./images/image2.png" class="answer-img" id="answer-img1" alt="Stationery store example" style="width: 100%;">
+        </section>
+        
+    
+    </main>
+    
+    
+    
+
+    <button class="goback" onclick="window.location.href='index.html'">Go Back</button>
+    <br>
+<!-- 
+    <script>
+     
+    document.getElementById('show-answer-btn1').addEventListener('click', function() {
+            var img = document.getElementById('answer-img1');
+            if (img.style.display === 'none' || img.style.display === '') {
+                img.style.display = 'block';
+                this.textContent = 'Hide Code';
+            } else {
+                img.style.display = 'none';
+                this.textContent = 'Show Code';
+            }
+        });
+    
+
+        document.getElementById('show-answer-btn2').addEventListener('click', function() {
+            var img = document.getElementById('answer-img2');
+            if (img.style.display === 'none' || img.style.display === '') {
+                img.style.display = 'block';
+                this.textContent = 'Hide Code';
+            } else {
+                img.style.display = 'none';
+                this.textContent = 'Show Code';
+            }
+        });
+    
+        document.getElementById('show-answer-btn3').addEventListener('click', function() {
+            var img = document.getElementById('answer-img4');
+            if (img.style.display === 'none' || img.style.display === '') {
+                img.style.display = 'block';
+                this.textContent = 'Hide Code';
+            } else {
+                img.style.display = 'none';
+                this.textContent = 'Show Code';
+            }
+        });
+
+    </script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            for (let i = 1; i <= 1; i++) {
+                const showAnswerBtn = document.getElementById('show-answer-btn' + i);
+                const img = document.getElementById('answer-img' + i);
+    
+                // Create the container div
+                const container = document.createElement('div');
+                container.classList.add('image-container');
+                img.parentNode.insertBefore(container, img);
+                container.appendChild(img);
+    
+                // Create the full-screen icon
+                const icon = document.createElement('span');
+                icon.classList.add('fullscreen-icon');
+                icon.innerHTML = '⛶';
+                icon.style.color = 'white'; 
+                icon.style.display = 'none'; // Initially hide the icon
+                container.appendChild(icon);
+    
+                // Event listener to show/hide image and icon
+                showAnswerBtn.addEventListener('click', function() {
+                    if (img.style.display === 'none' || img.style.display === '') {
+                        img.style.display = 'block';
+                        icon.style.display = 'block'; // Show the icon when the image is displayed
+                        this.textContent = 'Hide Code';
+                    } else {
+                        img.style.display = 'none';
+                        icon.style.display = 'none'; // Hide the icon when the image is hidden
+                        this.textContent = 'Show Code';
+                    }
+                });
+    
+                // Add full-screen functionality
+                icon.addEventListener('click', function () {
+                    openFullscreen(img.src);
+                });
+    
+                img.style.display = 'none'; // Initially hide the image
+            }
+        });
+    
+        function openFullscreen(imageSrc) {
+    let fullScreenWindow = window.open("");
+    fullScreenWindow.document.write(`
+        <img src="${imageSrc}" style="display: block; max-width: 100%; max-height: 100vh; margin: auto;">
+    `);
+    fullScreenWindow.document.body.style.margin = "0";
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact</title>
+    <style>
+        body {
+            font-family: Comic Sans MS;
+                        margin: 0;
+            padding: 0;
+            background-color: #ffde57;
+            text-align: center;
+            color: #333;
+        }
+        .header {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 0px 30px;
+            background-color: white; 
+            text-align: left;    
+        }
+        .logo {
+            width: 4%; /* Slightly larger logo */
+        }
+        img {
+            vertical-align: middle;
+        }
+        .header-image {
+            width: 25%; 
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .container {
+            margin: 1rem 2rem;
+            padding: 1rem 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 1rem 2rem;
+        }
+        .highlight {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .image-container {
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        .snake-container {
+            overflow: hidden; /* Ensures the snake doesn't show outside the container */
+            position: relative;
+            width: 100%;
+            height: 160px;
+        }
+        .snake {
+            position: absolute;
+            width: 130px !important; /* Adjust the width as needed */
+            height: auto;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        /* Updated animation to move left to right, then return to center */
+.snake.animate {
+    animation: snakeMoveLeftRightToCenter 6s forwards;
+}
+
+@keyframes snakeMoveLeftRightToCenter {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 200px); /* Move to the right */
+    }
+    100% {
+        left: calc(50% - 100px); /* Move to the center */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+    <div class="container">
+        <h2 style="color: #007bff;">Python Bites of Wisdom!</h2>
+        <h1 style="color: #4CAF50;">🔍 Python's Influence on Other Languages</h1>
+    
+        <div class="snake-container" id="snake-container" style="display: flex; justify-content: center; margin: 20px 0;">
+            <img src="./images/snake-image.png" alt="Python Snake" class="snake" id="snake-image" style="width: 15%; border-radius: 50%;" />
+        </div>
+        
+        <p style="font-size: 1.5rem; color: #333; text-align: center;">
+            Python has influenced many programming languages due to its simplicity and readability. 🐍✨
+        </p>
+        
+       
+       <div style="display: flex; justify-content: center;">
+        <ul style="font-size: 1.3rem; color: #333; text-align: left; list-style-type: none; padding: 0;">
+            <span style="font-size: 1.4rem; color: #555; text-align: center;">
+                Some of these languages include:
+            </span>
+            <li>💎 <strong>Ruby</strong>, known for its easy-to-read syntax.</li>
+            <li>🚀 <strong>Go</strong>, developed by Google.</li>
+            <li>🔬 <strong>Julia</strong>, designed for high-performance numerical and scientific computing.</li>
+        </ul>
+    </div> 
+        
+        
+    </div>
+    
+    <audio id="hiss-sound" src="./sounds/hiss.mp3"></audio>
+    <script>
+        const snakeImage = document.getElementById('snake-image');
+        const snakeContainer =  document.getElementById('snake-container');
+        const hissSound = document.getElementById('hiss-sound');
+        let isAnimating = false;
+
+        // Play hiss sound on hover
+        snakeImage.addEventListener('mouseover', () => {
+            hissSound.play();
+        });
+
+        // Stop sound on mouse out
+        snakeImage.addEventListener('mouseout', () => {
+            hissSound.pause();
+            hissSound.currentTime = 0; // Reset sound to start
+        });
+
+        // Play hiss sound and toggle animation on click
+        snakeContainer.addEventListener('click', () => {
+            if (!isAnimating) {
+                hissSound.play(); // Play sound on click
+                snakeImage.classList.add('animate'); // Start animation
+            } else {
+                hissSound.pause(); // Stop sound
+                hissSound.currentTime = 0; // Reset sound to start
+                snakeImage.classList.remove('animate'); // Stop animation
+            }
+            isAnimating = !isAnimating; // Toggle the state between animating and not animating
+        });
+
+        // Play animation once on page load and stop in the center
+      // Play animation once on page load and stop in the center
+window.onload = () => {
+    snakeImage.classList.add('animate');
+};
+
+    </script>
+</body>
+</html>

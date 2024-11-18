@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Detective -3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffde57;
+            text-align: center;
+            color: #333;
+        }
+
+        .header {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px 30px;
+            background-color: white;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .header-image {
+            width: 30%;
+            height: auto;
+        }
+
+        .container {
+            margin: 1rem 1.5rem;
+            padding: 1rem 2.5rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            /* text-align: center; */
+            font-family: 'Merriweather', serif;
+            /* color: #333; */
+
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #ff5733;
+            margin-bottom: 10px;
+        }
+
+        ol {
+            font-size: 1.4em;
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .button:hover {
+            background-color: #218838;
+        }
+
+        #hintBox {
+            display: none;
+            /* Initially hidden */
+            padding: 15px;
+            background-color: lightyellow;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #hintButton {
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #hintButton:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+    <!-- New Content Div -->
+    <div class="container">
+        <div style="display: flex; gap: 4rem;">
+            <img src="./images/image3.gif" alt="">
+            <div style="text-align: left;">
+                <h1 style="color: #FF5722;">🚧 Obstacle Avoidance Game!</h1>
+
+                <p style="font-size: 1.5rem; color: #333;">The player needs to avoid obstacles.</p>
+                <p style="font-size: 1.3rem; color: #3F51B5; font-weight: bold;">To play the game, use the left and
+                    right arrow keys.</p>
+                <p style="font-size: 1.3rem; color: #333;"><span style="color: #4CAF50; ; font-size: 1.5rem;">🧩
+                        <u>Challenge</u>: </span>In this code, we have two dictionaries: one for storing player details
+                    and another for obstacle details.
+                    Can you identify the error in the code?</p>
+            </div>
+        </div>
+
+
+
+
+        <h3 style="font-size: 1.3rem; color: #FF5722; font-weight: bold; text-align: center;">Incorrect Code:</h3>
+        <div style="display: flex; gap: 3rem; justify-content: center;">
+            <img src="./images/image4.png" alt="" width="35%">
+            <img src="./images/image6.png" alt="" width="35%">
+        </div>
+    </div>
+        <div class="container">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Go to the GitHub repository 👉
+                    <a href="https://github.com/WayToSucceed-Coding/AvoidObstacle-Student-Activity.git" target="_blank"
+                        class="button">Click Here to Open</a>
+                </li>
+                <li>Click the green "Code" button located near the top right corner of the repository.</li>
+                <li>In the dropdown menu that appears, click on "Download ZIP." This will download the entire repository
+                    as a ZIP file to your computer.</li>
+                <li>Once downloaded, locate the ZIP file in your Downloads folder (or the folder where your downloads
+                    are saved).</li>
+                <li>Right-click the ZIP file and select "Extract All…".</li>
+                <li>You can now open the extracted code in your code editor (VS Code).</li>
+                <li>Happy Debugging!🐞</li>
+            </ol>
+        </div>
+
+        <script>
+            const hintButton = document.getElementById('hintButton');
+            const hintBox = document.getElementById('hintBox');
+
+            // Toggle hint visibility
+            hintButton.addEventListener('click', () => {
+                if (getComputedStyle(hintBox).display === 'none') {
+                    hintBox.style.display = 'block';
+                    hintButton.textContent = 'Hide Hint 🔓';
+                } else {
+                    hintBox.style.display = 'none';
+                    hintButton.textContent = 'Show Hint 🔒';
+                }
+            });
+        </script>
+</body>
+
+</html>

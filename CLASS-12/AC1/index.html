@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AC1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="./logo/Logo.png" alt="Logo" class="logo" />
+        <img src="./logo/header.png" alt="Header" class="header-image" />
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center">DICTIONARY</h1>
+        <p class="text-center">Click on each topic to learn more.</p>
+        <div class="row">
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#dictionaryModal">
+                    Dictionary
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#creatingDictionaryModal">
+                    Creating a Dictionary
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#accessingValuesModal">
+                    Accessing Values
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#mutableDictionaryModal">
+                    Dictionaries are Mutable
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#addingValuesModal">
+                    Adding New Values
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#removingValuesModal">
+                    Removing Values
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#dictionaryMethodsModal">
+                    Dictionary Methods
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#loopingThroughDictionaryModal">
+                    Looping Through a Dictionary
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-custom btn-block" data-toggle="modal" data-target="#dictionaryInsideDictionaryModal">
+                    Nested Dictionary
+                </button>
+            </div>
+        </div>
+        
+
+</div>
+
+        <!-- Modals -->
+        <div class="modal fade" id="dictionaryModal" tabindex="-1" aria-labelledby="dictionaryLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dictionaryLabel">Dictionary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    Another useful non-primitive data type to store data is a <strong style="color: #007bff;">dictionary</strong> 📚.
+                                    <br><br>
+                                    A <strong style="color: #007bff;">dictionary</strong> is a collection of <strong style="color: #ff6347;">key</strong> and <strong style="color: #ff6347;">value</strong> pairs and is often referred to as a <strong>dict</strong> in Python.
+                                    <br><br>
+                                    A <span style="font-weight: bold; color: #007bff;">key:value</span> pair is referred to as an <span style="font-weight: bold; color: #28a745;">item</span> in a dictionary.
+                                    <br><br>
+                                    You might be wondering why we need a <strong style="color: #007bff;">dictionary</strong> to store data. 🤔
+                                    Can you think of a reason?
+                                    <br><br>
+                                    Let's take a scenario where you want to store the students in your class. What would you prefer? A <strong>list</strong> or a <strong>tuple</strong>? 📝
+                                    <br><br>
+                                    But if I say that you need to store the names along with the marks they scored in a recent Math test 🧮, how would you do that?
+                                    <br><br>
+                                    Well, that’s where a <strong style="color: #007bff;">dictionary</strong> helps! Let’s see how we can work with <strong>dictionaries</strong>! 🧑‍💻
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="creatingDictionaryModal" tabindex="-1" aria-labelledby="creatingDictionaryLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="creatingDictionaryLabel">Creating a Dictionary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    To create an empty dictionary, you can simply write the name you would like to give to your dictionary 
+                                    followed by ‘<strong>=</strong>’ and a pair of curly brackets <strong>{}</strong>. <br>
+                                    <img src="./images/mydata.png" alt="">
+                                    <br><br>
+                                    Now let’s take the example of two students: Rita and Reena. Rita scored 50 and Reena scored 20 in a test. 
+                                    If you wish to store their names along with the marks they’ve scored, you can do it like so:
+                                    <br> <img src="./images/image32.png" alt="">
+                                    <br><br>
+                                    <code>my_data = {'Rita': 50, 'Reena': 20}</code>
+                                    <br>
+                                    In this example:
+                                    - <strong>my_data</strong> is a dictionary,
+                                    - <strong>Rita</strong> and <strong>Reena</strong> are keys, and
+                                    - <strong>50</strong> and <strong>20</strong> are values.
+                                    <br><br>
+                                    There are certain rules for naming the keys in a dictionary:
+                                    <br><br>
+                                    💡  <u><strong>Rules for keys in the dictionary:</strong></u>
+                                    <br><br>
+                                    🔑 <b style="color: #007bff;">You can’t have the same keys for multiple values.</b> If you use the same keys for multiple values, the subsequent entries will overwrite the previous ones.
+                                    <br><br>
+                                    For example: <br>
+                                    <img src="./images/image31.png" alt=""> <br> You can see that when we try to add a second entry with the key 'Rita':
+                                    <code>my_data = {'Rita': 50, 'Reena': 20, 'Rita': 10}</code>
+                                    When we print it, the second occurrence of 'Rita': <strong>10</strong> overwrites the first occurrence of 'Rita': <strong>50</strong>, so the dictionary will contain:
+                                    <br><br>
+                                    <code>{'Rita': 10, 'Reena': 20}</code>
+                                    <br><br>
+                                    🔑 <b style="color: #007bff;">Only strings, numbers, and tuples can be used as keys.</b> If you use a list as a key, you will get a <strong style="color: red;">TypeError</strong>.
+                                    <br><br>
+                                <u>  <strong>Examples of valid keys:</strong></u>
+                                    <br><br>
+                                    <strong>1. Number as keys:</strong> 
+                                    <code>my_data = {1: 'one', 2: 'two'}</code>
+                                    <br>
+                                    <strong>2. String as keys:</strong>
+                                    <code>my_data = {'Rita': 50, 'Reena': 20}</code>
+                                    <br>
+                                    <strong>3. Tuple as keys:</strong>
+                                    <code>my_data = {(1, 2): 'point1', (3, 4): 'point2'}</code>
+                                    <br><br>
+                                    <strong>📝 Note:</strong> You can use any data type for values.
+                                    <br><br>
+                                    We have already used strings and integer numbers as values in our previous examples. You can even have <strong>floats</strong>, <strong>lists</strong>, and <strong>tuples</strong> as values.
+                                    <br><br>
+                                    <u><strong>Examples of valid values:</strong></u>
+                                    <br><br>
+                                    - <strong>List as values:</strong>
+                                    <code>my_data = {'Rita': [50, 60], 'Reena': [20, 30]}</code>
+                                    <br><br>
+                                    - <strong>Tuples as values:</strong>
+                                    <code>my_data = {'Rita': (50, 60), 'Reena': (20, 30)}</code>
+                                    <br><br>
+                                    This is the flexibility that dictionaries offer, allowing you to store a variety of data types as values.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="accessingValuesModal" tabindex="-1" aria-labelledby="accessingValuesLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="accessingValuesLabel">Accessing Values</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    Do you remember how we used to access values in a list?
+                                    <br><br>
+                                    We used to mention the name of the list followed by a pair of square brackets and then the index of the element you would like to access.
+                                    <br><br>
+                                    For example:
+                                    <br><br>
+                                    <code>my_list = [45, 12, 89, 75]</code>
+                                    <br><br>
+                                    <code>print(my_list[1])</code>
+                                    <br><br>
+                                    Output:
+                                    <br><br>
+                                    <code>12</code>
+                                    <br><br>
+                                    To access values inside a dictionary, you can mention the name of the dictionary followed by the respective key inside square brackets or by using the <code>get()</code> method.
+                                    <br><br>
+                                    👉  <strong>Using [] brackets:</strong>
+                                    <br><br>
+                                    ● <strong>If the key is a string:</strong>
+                                    <br><br>
+                                    <img src="./images/image41.png" alt=""><br>
+                                   <img src="./images/image39.png" alt="">
+                                    <br><br>
+                                    ● <strong>If the key is an integer:</strong>
+                                    <br><br>
+                                    <img src="./images/image40.png" alt=""><br>
+                                    <img src="./images/image42.png" alt="">
+                                    <br><br>
+                                    ● <strong>If the key is a tuple:</strong>
+                                    <br><br>
+                                    <img src="./images/image43.png" alt=""><br>
+                                    <img src="./images/image29.png" alt="">
+                                    <br><br>
+                                    👉  <strong>Using get() method:</strong>
+                                    <br><br>
+                                    <img src="./images/image44.png" alt=""><br>
+                                    <img src="./images/image45.png" alt="">
+                                    <br><br>
+                                    <!-- This method will return <code>None</code> if the key does not exist, rather than raising an error.
+                                    <br><br>
+                                    <strong>Note:</strong> Using <code>get()</code> is a good practice when you're unsure whether the key exists in the dictionary, as it avoids raising a <strong>KeyError</strong>. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="mutableDictionaryModal" tabindex="-1" aria-labelledby="mutableDictionaryLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mutableDictionaryLabel">Dictionaries are Mutable</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    It means you can change the dictionary itself by adding, updating, or removing key-value pairs.
+                                    <br><br>
+                                    <img src="./images/image40.png" alt=""><br>  <img src="./images/image46.png" alt=""><br> 
+                                    <br>
+                                    In this example we are updating the value for key <strong>4</strong>. Earlier it was <strong>Charles</strong> and now it is <strong>Charlie</strong>.
+                                    <br><br>
+                                  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="addingValuesModal" tabindex="-1" aria-labelledby="addingValuesLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addingValuesLabel">Adding New Values</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    We can <strong>add new key:value pair</strong> inside a dictionary.
+                                    <br><br>
+                                    <img src="./images/image47.png" alt=""><br>
+                                    <img src="./images/image19.png" alt="">
+                                     <br><br>
+                                    In this example, we have added a new key:value pair <strong>5: 'Naman'</strong> to the dictionary.
+                                    <br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="removingValuesModal" tabindex="-1" aria-labelledby="removingValuesLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="removingValuesLabel">Removing Values</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    You can <strong>remove the values</strong> by using the <code>del</code> statement and the <code>pop()</code> method.
+                                    <br><br>
+                                    🔑 <strong>Using <code>del</code> statement:</strong>
+                                    <br><br>
+                                    The <code>del</code> statement removes the item from the dictionary.
+                                    <br><br>
+                                   <img src="./images/image20.png" alt="">
+                                    <br><br>
+                                    🔑 <strong>Using <code>pop()</code> method:</strong>
+                                    <br><br>
+                                    The <code>pop()</code> method takes a key as an argument, removes it from the dictionary, and returns the associated value.
+                                    <br><br>
+                                    <img src="./images/image21.png" alt="">
+                                    <br><br>
+                                    🎯 As you can see, <code>pop()</code> not only removes the item but also returns the value of the removed key.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="dictionaryMethodsModal" tabindex="-1" aria-labelledby="dictionaryMethodsLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dictionaryMethodsLabel">Dictionary Methods</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    ● <strong>keys()</strong>
+                                    <br><br>
+                                    The <code>keys()</code> method returns a list of all <strong>keys</strong> in a dictionary.
+                                    <br>
+                                    For example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+
+                                   <img src="./images/image22.png" alt="">
+                                    <br><br>
+                                    
+                                    ● <strong>values()</strong>
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                    The <code>values()</code> method returns a list of all <strong>values</strong> in the dictionary.
+                                    <br><br>
+                                    For example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                  <img src="./images/image23.png" alt="">
+                                    <br><br>
+                                  ● <strong>items()</strong>
+                                    <br><br>
+                                    The <code>items()</code> method returns a list of <strong>tuples</strong> containing key-value pairs.
+                                    <br>
+                                    For example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                  <img src="./images/image24.png" alt="">
+                                    <br><br>
+                                    
+                                    ● <strong>copy()</strong>
+                                    <br><br>
+                                    The <code>copy()</code> method creates a <strong>copy</strong> of the dictionary.
+                                    <br><br>
+                                    For example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                    <img src="./images/image25.png" alt="">
+                                    <br><br>
+                                    🎯 This method does not modify the original dictionary; it creates a separate copy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="loopingThroughDictionaryModal" tabindex="-1" aria-labelledby="loopingThroughDictionaryLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loopingThroughDictionaryLabel">Looping Through a Dictionary</h5>
+                    
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    ● <strong>Using <code>keys()</code></strong>
+                                    <br><br>
+                                    You can loop through all the keys in a dictionary using the <code>keys()</code> method.
+                                    <br>
+                                    Example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                   <img src="./images/image26.png" alt="">
+                                    <br><br>
+                                    
+                                    ● <strong>Using <code>values()</code></strong>
+                                    <br><br>
+                                    You can loop through all the values in a dictionary using the <code>values()</code> method.
+                                    <br>
+                                    Example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                    <img src="./images/image27.png" alt="">
+                                    <br><br>
+        
+                                    ● <strong>Using <code>items()</code></strong>
+                                    <br>
+                                    You can loop through both keys and values in a dictionary using the <code>items()</code> method.
+                                    <br>
+                                    Example:
+                                    <br>
+                                    <code>students = {2: 'Reena', 3: 'Aman', 4: 'Charlie'}</code> <br> 
+                                   <img src="./images/image28.png" alt="">
+                                    <br><br>
+                                    🎯 This allows you to access both keys and values in a single loop.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="dictionaryInsideDictionaryModal" tabindex="-1" aria-labelledby="dictionaryInsideDictionaryLabel" aria-hidden="true">
+            <div class="modal-dialog custom-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dictionaryInsideDictionaryLabel">Nested Dictionary</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="content-container">
+                            <div class="text-content">
+                                <p style="font-size: 1.5rem;">
+                                    <strong>Nested Dictionary (Dictionary inside a dictionary)</strong>
+                                    <br><br>
+                                    We can have another dictionary inside a dictionary.
+                                    <br><br>
+                                    Example:
+                                    <br>
+                                    <img src="./images/image11.png" alt="">
+                                    <br><br>
+                                    🔑 <strong><u>Accessing values</u>:</strong>
+                                    <br><br>
+                                    To access values in a nested dictionary, you can chain the keys.
+                                    <br><br>
+                                    🎯 <strong>Access the dictionary with key 1:</strong>
+                                    <br><img src="./images/image4.png" alt="">
+                                    <br><br>
+                                    🎯 <strong>Access the value inside the 'name' key in the dictionary with key 1:</strong>
+                                    <br><img src="./images/image2.png" alt=""><br>
+                                    As you can see, you can access nested values by chaining the keys.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+
+
+
+
+
+
+
+
+      
+
+
+     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
